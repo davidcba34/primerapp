@@ -1,13 +1,13 @@
 import CartWidget from './CartWidget.js';
-import ItemListContainer from './img/ItemList';
+import ItemListContainer from './ItemList';
 import './Navbar.css';
 
 function Navbar() {
     return (
       <header className='navbar'>
-        <button >Home</button>
+        <a href='#'>Home</a>
         <p>ALMALUZ</p>
-        <a src = "#">Tienda</a>
+        <a href = "#">Tienda</a>
         <CartWidget />
         <ItemListContainer />
       </header>
