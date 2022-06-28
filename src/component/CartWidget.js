@@ -1,6 +1,8 @@
+import '../component/CartWidget.css'
+import imagen from '../img/carrito-de-compras.png';
 function CartWidget() {
     return (
-      <img src="./img/carrito-de-comra.png" alt="carrito"/>
+      <img className='img' src={imagen} />
     );
   }
   
