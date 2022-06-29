@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
     <Navbar/>
-    <ItemListContainer/>
+    <ItemListContainer name="VELAS ALMALUZ"/>
     <Contador stock={10}/>
     <Body />
     </div>
