@@ -1,10 +1,10 @@
 function ItemListContainer() {
   
   return (
-    <ul className = "nav-list">
-      <li>productos</li>
-      <li>productos</li>
-    </ul>
+    <section className="bienvenida">
+      <h2>Bienvendido a nuestra página</h2>
+      <p>Elegi tu producto de esta lista</p>
+    </section>
   );
 }
 

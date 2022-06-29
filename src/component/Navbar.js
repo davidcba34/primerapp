@@ -1,6 +1,6 @@
 import CartWidget from './CartWidget.js';
 import './Navbar.css';
-import ItemListContainer from './ItemListContainer.js'
+
 function Navbar() {
     return (
       <header className='navbar'>
@@ -8,9 +8,9 @@ function Navbar() {
         <p>ALMALUZ</p>
         <a href = "#">Tienda</a>
         <CartWidget/>
-        <ItemListContainer/>
       </header>
     );
+    
   }
   
   export default Navbar;
