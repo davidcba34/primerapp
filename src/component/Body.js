@@ -1,17 +1,21 @@
+import {useEffect, useState} from 'react';
 import './Body.css';
 import Card from './Card';
 
 function Body() {
+    
+    const[info,setInfo] = useState([])
+
+    useEffect (()=>{
+        fetch ('data.json')
+        .then ((resp) => resp.json())
+        .then ((data) => setInfo(data)) 
+    }, [])
     return (
         <section className='cuerpo'>
-            <Card product='velas largas lisas' price='200' img=''/>
-            <Card product='sirios' price='300'img=''/>
-            <Card product='velas con forma' price='400'img=''/>
-            <Card product='velas a base de gel' price='500'img=''/>
-            <Card product='velas a vase de soja' price='200'img=''/>
-            <Card product='velas para spa' price='600'img=''/>
+            {info && info.map(i => <Card product={i.nombre} price={i.precio}/>)}
         </section>
     );
   }
   
-  export default Body;
+   export default Body;
