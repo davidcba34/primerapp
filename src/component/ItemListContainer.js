@@ -1,14 +1,26 @@
-import { ItemList } from './ItemLis';
-import './ItemListContainer.css';
-function ItemListContainer({name}) {
-  
-  return (
-    <div className="bienvenida">
-      <h2>{name}</h2>
-      <p>Elegi tu producto de esta lista</p>
-      <ItemList ListadoProductos={productos}/>
-    </div>
-  );
-}
+import React,{useEffect, useState} from "react";
+import {ListaProductos} from './data.json'
 
-export default ItemListContainer;
+
+const ItemListContainer = ({greetings}) =>{
+    
+    const [productos, setProductos] = useState ([])
+    const getProductos = () =>{
+      return new Promise (({resolve, reject}) =>{
+        sesetTimeOut(() =>{
+          listadoProductos.length>0?
+          resolve{listadoProductos}
+          reject ("no hay datos")
+        }, 2000);
+      }
+      )
+      (listadoProductos)
+
+    }
+
+
+
+
+
+
+}
