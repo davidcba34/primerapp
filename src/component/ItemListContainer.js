@@ -1,26 +1,49 @@
 import React,{useEffect, useState} from "react";
-import {ListaProductos} from './data.json'
+import {listadoProductos} from './data.json'
+import { ItemList } from "./ItemList";
 
 
 const ItemListContainer = ({greetings}) =>{
     
-    const [productos, setProductos] = useState ([])
+    const [productosFetch, setProductosFetch] = useState ([])
     const getProductos = () =>{
       return new Promise (({resolve, reject}) =>{
-        sesetTimeOut(() =>{
+        setTimeOut(() =>{
           listadoProductos.length>0?
-          resolve{listadoProductos}
+          resolve(listadoProductos):  
           reject ("no hay datos")
         }, 2000);
       }
       )
-      (listadoProductos)
-
+    
     }
+    useEffect(()=> {
+      getProductos()
+      .then(res =>getProductos(res))
+      .catch(err =>console.log(err))
+    },[] )
+      
+    
+      //useEffect(()=> {
+        //fetch('./data/data.json')
+        //.then(res =>res.json())
+        //.then(data => setProductosFetch(data))
+        //.catch(err =>console.log(err))
+      //},[] )
+        //console.log("productos:",productos)
+        //console.log("productosFetch:",productosFetch)
+      
+      
+    return (
 
-
-
+      <>
+       <h1>{greetings}</h1>
+       <hr/>
+      <ItemList ListadoProductos={productos}/>
+      </>
+    )
 
 
 
 }
+export default ItemListContainer;

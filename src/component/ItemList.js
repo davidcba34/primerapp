@@ -1,4 +1,5 @@
 import React from 'react'
+import { Item } from './Item'
 
 export const ItemList = ({ListadoProductos}) =>{
  
@@ -7,7 +8,7 @@ export const ItemList = ({ListadoProductos}) =>{
     return(
         <div className='container'>
             <div className='row justify-content-evely'>
-                {ListadoProductos.map((unProducto)=> <h1>{unProducto.name}</h1>)}
+                {ListadoProductos.map((unProducto)=> < Item key={unProducto.id} name = {unProducto.name} image={unProducto.img} price={unProducto.price}/>)}
             </div>
         </div>
     )
