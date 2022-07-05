@@ -1,7 +1,7 @@
 import{useEffect, useState} from "react";
 import Swal from 'sweetalert2'
-function Contador ({stock}){
-    const [num, setNum] = useState(0);
+function ItemCont ({stock, initial, onAdd}){
+    const [num, setNum] = useState(initial);
 
     useEffect ( ()=>{
         if (num === stock -2){
@@ -13,8 +13,6 @@ function Contador ({stock}){
               })
         }
         
-
- 
     }, [num])
     const sumar = ()=>{
         if (num < stock){
@@ -37,12 +35,12 @@ function Contador ({stock}){
         }
     }
     const restar = () => {
-        if (num>0){
+        if (num> initial){
             setNum(num - 1)
         }
     }
     const reiniciar = () => {
-        setNum(0)
+        setNum(initial)
     }
 
     return(
@@ -53,9 +51,9 @@ function Contador ({stock}){
             <button onClick={restar}>Restar</button>
             <button onClick={reiniciar}>Reiniciar</button>
 
-            <button>{num > 0 ?`Agragar al carrito`: `Elegir tu cantidad`}</button>
+            <button onClick={()=>onAdd (num)}>{num > initial ?`Agragar al carrito`: `Elegir tu cantidad`}</button>
         </>
 
     )
 }
-export default Contador;
+export default ItemCont;

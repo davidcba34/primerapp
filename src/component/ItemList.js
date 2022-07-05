@@ -8,7 +8,7 @@ export const ItemList = ({ListadoProductos}) =>{
     return(
         <div className='container'>
             <div className='row justify-content-evely'>
-                {ListadoProductos.map((unProducto)=> < Item key={unProducto.id} name = {unProducto.name} image={unProducto.img} price={unProducto.price}/>)}
+                {ListadoProductos.map((unProducto)=> < Item key={unProducto.id} nombre = {unProducto.nombre} img={unProducto.img} precio={unProducto.precio}/>)}
             </div>
         </div>
     )

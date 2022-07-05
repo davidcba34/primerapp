@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import {listadoProductos} from './data.json'
+import velas from './Data/data'
 import { ItemList } from "./ItemList";
 
 
@@ -8,11 +8,10 @@ const ItemListContainer = ({greetings}) =>{
     const [productos, setProductos] = useState ([])
     
     const getProductos = () =>{
-      return new Promise (({resolve, reject}) =>{
-        setTimeOut(() =>{
-          listadoProductos.length>0?
-          resolve(listadoProductos):  
-          reject ("no hay datos")
+      return new Promise ((resolve, reject) =>{
+        setTimeout(() => {
+          resolve(velas)
+          
         }, 2000);
       }
       )
@@ -23,18 +22,13 @@ const ItemListContainer = ({greetings}) =>{
       .then(res =>setProductos(res))
       .catch(err =>console.log(err))
     },[] )
-      
     
-      //useEffect(()=> {
-        //fetch('./data/data.json')
-        //.then(res =>res.json())
-        //.then(data => setProductosFetch(data))
-        //.catch(err =>console.log(err))
-      //},[] )
-        //console.log("productos:",productos)
-        //console.log("productosFetch:",productosFetch)
+
+  
+     console.log (productos)
+ 
       
-      
+
     return (
 
       <>
