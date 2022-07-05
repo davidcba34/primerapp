@@ -5,7 +5,8 @@ import { ItemList } from "./ItemList";
 
 const ItemListContainer = ({greetings}) =>{
     
-    const [productosFetch, setProductosFetch] = useState ([])
+    const [productos, setProductos] = useState ([])
+    
     const getProductos = () =>{
       return new Promise (({resolve, reject}) =>{
         setTimeOut(() =>{
@@ -19,7 +20,7 @@ const ItemListContainer = ({greetings}) =>{
     }
     useEffect(()=> {
       getProductos()
-      .then(res =>getProductos(res))
+      .then(res =>setProductos(res))
       .catch(err =>console.log(err))
     },[] )
       
