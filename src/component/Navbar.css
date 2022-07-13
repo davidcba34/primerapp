@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(191, 240, 191);
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
