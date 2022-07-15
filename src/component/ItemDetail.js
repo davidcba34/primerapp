@@ -18,20 +18,5 @@ function ItemDetail(props){
         </div>
 
     );
-}
-const titleHandler = (event)=>{
-    
-}
-
-function ItemDetail ({item}){
-    
-    onAdd (quantityToAdd){
-
-    }
-    return(
-
-
-    )
-}
-
+};
 export default ItemDetail;

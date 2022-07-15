@@ -1,0 +1,11 @@
+.Home{
+    color: violet;
+    background-image: url(../img/aroma-salt-candlesREALCUT.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 800px;
+}
+.h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

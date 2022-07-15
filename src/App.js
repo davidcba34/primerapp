@@ -12,17 +12,18 @@ function App(){
     alert ('agregaste ' + cantidad + ' a tu carrito')
   }
   return (
-    <div className="App">
-    <Navbar/>
-    <Routes>
-      <Route path = "/home" element={<Home/>}></Route>
-      <Route path = "/tienda" element={<Tienda/>}></Route>
-    </Routes>
-    <ItemListContainer greetings="BIENVENIDOS A VELAS ALMALUZ"/>
-    <ItemCont stock={10} initial={1} onAdd= {onAdd}/>
-    <Item />
-
-    </div>
+  
+      <div className="App">
+       <Navbar/>
+       <Routes>
+         <Route path = "/home" element={<Home/>}></Route>
+         <Route path = "/tienda" element={<ItemListContainer greetings="EN NUESTRA PAGINA DE PRODUCTOS, ENCONTRARAS LO QUE NECESITAS ."/>}></Route>
+       </Routes>
+        
+        <ItemCont stock={10} initial={1} onAdd= {onAdd}/>
+        <Item />
+     </div>
+    
   );
 }
 

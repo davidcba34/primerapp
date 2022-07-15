@@ -9,4 +9,30 @@
     display: flex;
     flex-direction: row;
     align-content: space-around;
+    font-size: 3rem;
+    color: cornflowerblue;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+.navbar li{
+    margin: 0;
+    width: 5rem;
+}
+.navbar a{
+    color: rgb(43, 120, 187);
+    text-decoration: none;
+}
+.navbar a:hover,
+.navbar a:active,
+.navbar a.active{
+    color: blueviolet;
+    padding-bottom: 0 25 rem;
+    border-bottom: 4px solid violet;
 }
