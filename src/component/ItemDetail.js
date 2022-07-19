@@ -2,7 +2,7 @@
 import './ItemDetail';
 import { useContext, useState } from 'react';
 import {CartContext} from "./CartContext";
-import {link} from "react-router-dom"
+import {link} from "react-router-dom";
 import { useContext } from 'react';
 
 function ItemDetail(props){
@@ -29,7 +29,16 @@ function ItemDetail(props){
                     <p className='description'>{description}</p>
                     <p className='p '>{price}</p>
                 </div>
+                <div>
+                    {purchaseCompleted ?(
 
+                        <Link to ="./Item" className = "addCarrito">
+                        Ir a mi carrito
+                        </Link>
+                         ) : (<ItemCount className= "itemcount" onAdd={onAdd}/>
+                         )
+                    }
+                </div>
             </div>
 
 
